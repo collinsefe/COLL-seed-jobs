@@ -1,4 +1,4 @@
-String env = 'pe'
+String env = 'test'
 
 def githubUrl = 'https://github.com'
 def gitCreds = "12ac599-aee0"
@@ -21,13 +21,13 @@ job("PROD_${env}-Create-Job"){
         }
     }
 
-    label('A-Build-Node')
+    // label('A-Build-Node')
 
     disabled(false)
     concurrentBuild(false)
 
     steps{
-        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/createEnvProd.sh"))
+        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_test.sh"))
     }
 
     publishers{

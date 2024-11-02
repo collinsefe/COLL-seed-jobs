@@ -1,4 +1,4 @@
-String env = 'pe'
+String env = 'prod'
 
 def githubUrl = 'https://github.com'
 def gitCreds = "d447df7b-7f19-4a5e-9939-fd0e58b8f1fb"
@@ -26,7 +26,7 @@ job("IHC_${env}-Create-Job"){
     concurrentBuild(false)
 
     steps{
-        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run.sh"))
+        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_prod.sh"))
     }
 
     publishers{

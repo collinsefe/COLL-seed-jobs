@@ -2,7 +2,7 @@
 
 echo " Hello Jenkins"
 sleep 10
-terraform version
+# terraform version
 
 
 

@@ -52,11 +52,9 @@ job("CAP_${env.toUpperCase()}-Job") {
     concurrentBuild(false)
 
     steps {
-        // Use the Jenkinsfile in the resources folder
-        // Ensure to use the correct path where the Jenkinsfile is located
+
         pipeline {
             script {
-                // Point to the Jenkinsfile for the pipeline definition
                 load "resources/${env.toUpperCase()}/Jenkinsfile"
             }
         }
@@ -68,13 +66,7 @@ job("CAP_${env.toUpperCase()}-Job") {
             downstream("zdb-addReadANDWrite", "SUCCESS")
         }
     }
-    // wrappers{
-    //     credentialsBinding{
-    //         string("masterpass", "asdjhafh123")
-    //         file("PE_PBE_FILE", "32743646hjsdjhdjgdggds")
-    //     }
-    //     timestamps()
-    // }
+
     configure{
         it / 'properties' / 'com.sonyericsson.rebuild.RebuildSettings' {
             'autoRebuild'('false')

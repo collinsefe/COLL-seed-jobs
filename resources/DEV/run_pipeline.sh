@@ -2,6 +2,10 @@
 
 # Navigate to the project directory (adjust the path as necessary)
 
+git clone https://gitlab.com/cloud-devops-assignments/spring-boot-react-example.git
+
+cd cloud-devops-assignments/spring-boot-react-example
+
 ls -la 
 sleep 10
 

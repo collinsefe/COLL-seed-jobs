@@ -16,7 +16,7 @@ job("CAP_${env}-SEED-Job"){
                 
             }
             extensions{
-                branch('*/main')
+                branch('*/dev')
             }
         }
     }

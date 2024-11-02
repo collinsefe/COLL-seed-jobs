@@ -15,7 +15,7 @@ job("CAP_${env}-SEED-Job"){
                 credentials(gitCreds)
             }
             extensions{
-                branch('*/test')
+                branch('*/dev')
             }
          }
         }

@@ -4,7 +4,7 @@
 
 git clone https://gitlab.com/cloud-devops-assignments/spring-boot-react-example.git
 
-cd cloud-devops-assignments/spring-boot-react-example
+cd spring-boot-react-example
 
 ls -la 
 sleep 10
@@ -22,7 +22,8 @@ fi
 
 # Run the Spring Boot application
 echo "Running the Spring Boot application..."
-java -jar target/*.jar &
+java -jar target/*.jar --server.port=8081 &
+# java -jar target/*.jar &
 
 # Store the PID of the Java process
 APP_PID=$!

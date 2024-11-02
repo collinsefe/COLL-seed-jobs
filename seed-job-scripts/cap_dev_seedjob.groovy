@@ -23,18 +23,9 @@ job("CAP_${env.toUpperCase()}-Job") {
     disabled(false)
     concurrentBuild(false)
 
-    // steps {
-    //     // Using the pipeline DSL to load the Jenkinsfile
-    //     script {
-    //         // Assuming the Jenkinsfile is in the resources folder
-    //         def jenkinsFilePath = "resources/${env.toUpperCase()}/Jenkinsfile"
-    //         load jenkinsFilePath
-    //     }
-    // }
-
        steps {
         // Load and execute the Jenkinsfile as a shell script
-        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_pipeline.sh")
+        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_pipeline.sh"))
     }
 
 

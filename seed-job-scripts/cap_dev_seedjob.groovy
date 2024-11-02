@@ -7,7 +7,7 @@ job("CAP_${env.toUpperCase()}-Job") {
     description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")
     keepDependencies(false)
 
-    multiscm {
+    scm {
         git {
             remote {
                 name('origin')

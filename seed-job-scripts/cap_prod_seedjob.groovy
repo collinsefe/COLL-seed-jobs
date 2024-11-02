@@ -3,7 +3,7 @@ String env = 'prod'
 def githubUrl = 'https://github.com'
 def gitCreds = "prodigital-collinsefe"
 
-job("CAP_${env.toUpperCase()}-SEED-Job"){
+job("CAP_${env.toUpperCase()}-DOT-NET-Job"){
     description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")
     keepDependencies(false)
 
@@ -26,7 +26,7 @@ job("CAP_${env.toUpperCase()}-SEED-Job"){
     concurrentBuild(false)
 
     steps{
-        shell(readFileFromWorkspace("resources/${env}/run_prod.sh"))
+        shell(readFileFromWorkspace("resources/${env.toUpperCase}/run_prod.sh"))
     }
 
     publishers{

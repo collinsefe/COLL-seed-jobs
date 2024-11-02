@@ -11,7 +11,7 @@ job("CAP_${env}-SEED-Job"){
         git{
             remote{
                 name('origin')
-                url ("git@${githubUrl}:prodigitaluk/medical-app-ci.git")
+                url ("https://github.com/collinsefe/dot-net-seed.git")
                 credentials(gitCreds)
                 
             }

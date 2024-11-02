@@ -18,7 +18,6 @@ job("CAP_${env}-SEED-Job"){
                 branch('*/dev')
             }
          }
-        }
     }
 
     // label('A-Build-Node')

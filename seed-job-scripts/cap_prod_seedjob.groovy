@@ -3,7 +3,7 @@ String env = 'prod'
 def githubUrl = 'https://github.com'
 def gitCreds = "prodigital-collinsefe"
 
-job("IHC_${env}-Create-Job"){
+job("CAP_${env}-SEED-Job"){
     description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")
     keepDependencies(false)
 
@@ -11,7 +11,7 @@ job("IHC_${env}-Create-Job"){
         git{
             remote{
                 name('origin')
-                url ("https://github.com/collinsefe/capgem-app")
+                url ("https://github.com/collinsefe/dot-net-seed.git")
                 credentials(gitCreds)
             }
             extensions{

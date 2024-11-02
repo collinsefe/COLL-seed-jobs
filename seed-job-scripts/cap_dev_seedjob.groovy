@@ -3,21 +3,11 @@ String env = 'dev'
 def githubUrl = 'https://github.com'
 def gitCreds = "prodigital-collinsefe"
 
-job("COLL_${env}-Create-Job"){
+job("CAP_${env}-SEED-Job"){
     description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")
     keepDependencies(false)
 
     multiscm{
-        git{
-            remote{
-                name('origin')
-                url ("https://github.com/collinsefe/capgem-app")
-                credentials(gitCreds)
-            }
-            extensions{
-                branch('*/dev')
-            }
-        }
         git{
             remote{
                 name('origin')

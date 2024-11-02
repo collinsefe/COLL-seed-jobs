@@ -11,7 +11,7 @@ job("CAP_${env.toUpperCase()}-Job"){
         git{
             remote{
                 name('origin')
-                url ("https://github.com/collinsefe/capgem-app.git")
+                url ("https://github.com/collinsefe/dot-net-seed.git")
                 credentials(gitCreds)
                 
             }

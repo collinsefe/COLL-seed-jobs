@@ -34,7 +34,7 @@ job("CAP_${env.toUpperCase()}-Job") {
 
        steps {
         // Load and execute the Jenkinsfile as a shell script
-        shell("cd resources/${env.toUpperCase()} && ./Jenkinsfile")
+        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_pipeline.sh")
     }
 
 

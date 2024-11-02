@@ -1,7 +1,7 @@
 String env = 'dev'
 
 def githubUrl = 'https://github.com'
-def gitCreds = "12ac599-aee0"
+def gitCreds = "prodigital-collinsefe"
 
 job("COLL_${env}-Create-Job"){
     description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")
@@ -46,13 +46,13 @@ job("COLL_${env}-Create-Job"){
             downstream("zdb-addReadANDWrite", "SUCCESS")
         }
     }
-    wrappers{
-        credentialsBinding{
-            string("masterpass", "asdjhafh123")
-            file("PE_PBE_FILE", "32743646hjsdjhdjgdggds")
-        }
-        timestamps()
-    }
+    // wrappers{
+    //     credentialsBinding{
+    //         string("masterpass", "asdjhafh123")
+    //         file("PE_PBE_FILE", "32743646hjsdjhdjgdggds")
+    //     }
+    //     timestamps()
+    // }
     configure{
         it / 'properties' / 'com.sonyericsson.rebuild.RebuildSettings' {
             'autoRebuild'('false')

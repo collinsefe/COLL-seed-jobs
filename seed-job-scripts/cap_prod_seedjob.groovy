@@ -1,7 +1,7 @@
 String env = 'prod'
 
 def githubUrl = 'https://github.com'
-def gitCreds = "d447df7b-7f19-4a5e-9939-fd0e58b8f1fb"
+def gitCreds = "prodigital-collinsefe"
 
 job("IHC_${env}-Create-Job"){
     description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")

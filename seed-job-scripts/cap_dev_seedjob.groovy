@@ -11,12 +11,12 @@ job("CAP_${env.toUpperCase()}-Job"){
         git{
             remote{
                 name('origin')
-                url ("https://github.com/collinsefe/dot-net-app.git")
+                url ("https://gitlab.com/collinsefe/spring-boot-react-example")
                 credentials(gitCreds)
                 
             }
             extensions{
-                branch('*/dev')
+                branch('*/main')
             }
         }
     }

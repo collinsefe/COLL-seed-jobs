@@ -26,7 +26,7 @@ job("CAP_${env.toUpperCase()}-DOT-NET-Job"){
     concurrentBuild(false)
 
     steps{
-        shell(readFileFromWorkspace("resources/${env.toUpperCase()}1/run_test.sh"))
+        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_test.sh"))
     }
 
     publishers{

@@ -27,7 +27,7 @@ job("CAP_${env}-SEED-Job"){
     concurrentBuild(false)
 
     steps{
-        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_test.sh"))
+        shell(readFileFromWorkspace("resources/${env}/run_test.sh"))
     }
 
     publishers{

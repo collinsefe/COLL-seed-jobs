@@ -15,7 +15,7 @@ job("CAP_${env.toUpperCase()}-SEED-Job"){
                 credentials(gitCreds)
             }
             extensions{
-                branch('*/dev')
+                branch('*/main')
             }
         }
     }

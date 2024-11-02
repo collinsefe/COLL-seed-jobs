@@ -11,11 +11,11 @@ job("CAP_${env.toUpperCase()}-SEED-Job"){
         git{
             remote{
                 name('origin')
-                url ("https://github.com/collinsefe/dot-net-seed.git")
+                url ("https://github.com/collinsefe/capgem-app.git")
                 credentials(gitCreds)
             }
             extensions{
-                branch('*/dev')
+                branch('*/test')
             }
          }
     }

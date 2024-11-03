@@ -16,5 +16,5 @@ dotnet test
 dotnet publish -c Release -o out
 
 docker build -t cap-gem-app .
-docker run -d -p 8082:80 cap-gem-app
+docker run -d -p 8080:8083 cap-gem-app
 

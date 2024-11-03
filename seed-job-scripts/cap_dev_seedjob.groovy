@@ -29,17 +29,17 @@ job("CAP_${env.toUpperCase()}-Job") {
     }
 
 
-    publishers {
-        downstream("JobName", "SUCCESS")
-        triggers {
-            downstream("zdb-addReadANDWrite", "SUCCESS")
-        }
-    }
+    // publishers {
+    //     downstream("JobName", "SUCCESS")
+    //     triggers {
+    //         downstream("zdb-addReadANDWrite", "SUCCESS")
+    //     }
+    // }
 
-    configure {
-        it / 'properties' / 'com.sonyericsson.rebuild.RebuildSettings' {
-            'autoRebuild'('false')
-            'rebuildDisabled'('false')
-        }
-    }
+    // configure {
+    //     it / 'properties' / 'com.sonyericsson.rebuild.RebuildSettings' {
+    //         'autoRebuild'('false')
+    //         'rebuildDisabled'('false')
+    //     }
+    // }
 }

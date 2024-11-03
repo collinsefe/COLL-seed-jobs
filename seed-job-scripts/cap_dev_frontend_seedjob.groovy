@@ -15,7 +15,7 @@ job("CAP-FRONTEND-${env.toUpperCase()}-Job") {
                 credentials(gitCreds)
             }
             extensions{
-                branch('*/master')
+                branch('*/main')
             }
         }
     }

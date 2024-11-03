@@ -29,12 +29,12 @@ job("CAP-BACKEND-${env.toUpperCase()}-Job") {
     }
 
 
-    // publishers {
-    //     downstream("JobName", "SUCCESS")
-    //     triggers {
-    //         downstream("zdb-addReadANDWrite", "SUCCESS")
-    //     }
-    // }
+    publishers {
+        downstream("CAP-DOCKER-DEV-Job", "SUCCESS")
+        triggers {
+            downstream("zdb-addReadANDWrite", "SUCCESS")
+        }
+    }
 
     // configure {
     //     it / 'properties' / 'com.sonyericsson.rebuild.RebuildSettings' {

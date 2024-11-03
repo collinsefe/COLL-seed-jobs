@@ -15,7 +15,7 @@ job("CAP-BACKEND-${env.toUpperCase()}-Job") {
                 credentials(gitCreds)
             }
             extensions {
-                branch('*/main')
+                branch('*/master')
             }
         }
     }

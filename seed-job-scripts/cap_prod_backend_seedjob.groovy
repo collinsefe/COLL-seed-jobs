@@ -35,13 +35,7 @@ job("CAP-BACKEND-${env.toUpperCase()}-Job"){
             downstream("zdb-addReadANDWrite", "SUCCESS")
         }
     }
-    // wrappers{
-    //     credentialsBinding{
-    //         string("masterpass", "asdjhafh123")
-    //         file("PE_PBE_FILE", "32743646hjsdjhdjgdggds")
-    //     }
-    //     timestamps()
-    // }
+ 
     configure{
         it / 'properties' / 'com.sonyericsson.rebuild.RebuildSettings' {
             'autoRebuild'('false')

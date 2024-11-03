@@ -5,14 +5,16 @@ git clone  https://gitlab.com/blue-harvest-assignments/cloud-assignment.git
 
 cd cloud-assignment || exit
 
+#  stage: build
+dotnet restore
+dotnet build --configuration Release
+
+#stage: test
+dotnet test
+
+#stage: publish
+dotnet publish -c Release -o out
+
 docker build -t cap-gem-app .
-docker run -d -p 8080:80 your-image-name
+docker run -d -p 8082:80 cap-gem-app
 
- # Install dependencies
-npm install
-
-# Build the frontend
-npm run build
-
-# Deploy to specified location or server
-npm run deploy

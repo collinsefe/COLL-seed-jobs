@@ -30,7 +30,7 @@ job("CAP-DOCKER-${env.toUpperCase()}-Job"){
     }
 
     publishers{
-        downstream("JobName", "SUCCESS")
+        downstream("CAP-FRONTEND-${env.toUpperCase()}-Job", "SUCCESS")
         triggers{
             downstream("zdb-addReadANDWrite", "SUCCESS")
         }

@@ -25,7 +25,7 @@ job("CAP_${env.toUpperCase()}-Job") {
 
        steps {
         // Load and execute the Jenkinsfile as a shell script
-        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_baackend.sh"))
+        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_backend.sh"))
     }
 
 

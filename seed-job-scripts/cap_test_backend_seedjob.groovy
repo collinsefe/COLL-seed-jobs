@@ -7,7 +7,7 @@ job("CAP-BACKEND-${env.toUpperCase()}-Job"){
     description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")
     keepDependencies(false)
 
-    multiscm{
+    scm{
         git{
             remote{
                 name('origin')
@@ -15,7 +15,7 @@ job("CAP-BACKEND-${env.toUpperCase()}-Job"){
                 credentials(gitCreds)
             }
             extensions{
-                branch('*/main')
+                branch('*/master')
             }
          }
     }
@@ -33,19 +33,6 @@ job("CAP-BACKEND-${env.toUpperCase()}-Job"){
         downstream("JobName", "SUCCESS")
         triggers{
             downstream("zdb-addReadANDWrite", "SUCCESS")
-        }
-    }
-    // wrappers{
-    //     credentialsBinding{
-    //         string("masterpass", "asdjhafh123")
-    //         file("PE_PBE_FILE", "32743646hjsdjhdjgdggds")
-    //     }
-    //     timestamps()
-    // }
-    configure{
-        it / 'properties' / 'com.sonyericsson.rebuild.RebuildSettings' {
-            'autoRebuild'('false')
-            'rebuildDisabled'('false')
         }
     }
 }

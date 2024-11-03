@@ -7,7 +7,7 @@ job("CAP-FRONTEND-${env.toUpperCase()}-Job") {
     description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")
     keepDependencies(false)
 
-    multiscm{
+    scm{
         git{
             remote{
                 name('origin')
@@ -16,16 +16,6 @@ job("CAP-FRONTEND-${env.toUpperCase()}-Job") {
             }
             extensions{
                 branch('*/master')
-            }
-        }
-        git{
-            remote{
-                name('origin')
-                url ("https://gitlab.com/blue-harvest-assignments/cloud-assignment")
-                credentials(gitCreds)
-            }
-            extensions{
-                branch('*/main')
             }
         }
     }

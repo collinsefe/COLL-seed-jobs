@@ -26,7 +26,8 @@ job("CAP-DOCKER-${env.toUpperCase()}-Job"){
     concurrentBuild(false)
 
     steps{
-        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_docker.groovy"))
+        shell("groovy resources/${env.toUpperCase()}/run_docker.groovy")
+        // shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_docker.groovy"))
     }
 
     publishers{

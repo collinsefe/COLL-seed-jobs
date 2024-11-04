@@ -9,21 +9,21 @@ def environments = [
         name: "Development",
         branch: "dev",
         ec2_instance: "ec2-instance-dev",
-        script_path: "resources/DEV/run_dev.sh",
+        script_path: "resources/DEV/run_backend.sh",
         port: "8081"
     ],
     staging: [
         name: "Testing",
         branch: "test",
         ec2_instance: "ec2-instance-staging",
-        script_path: "resources/TEST/run_test.sh",
+        script_path: "resources/TEST/run_backend.sh",
         port: "8082"
     ],
     prod: [
         name: "Production",
         branch: "main",
         ec2_instance: "ec2-instance-prod",
-        script_path: "resources/PROD/run_prod.sh",
+        script_path: "resources/PROD/run_backend.sh",
         port: "8083"
     ]
 ]

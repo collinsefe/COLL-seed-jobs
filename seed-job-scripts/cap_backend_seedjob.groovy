@@ -3,19 +3,19 @@ def environments = [
         name: "Development",
         branch: "dev",
         ec2_instance: "ec2-instance-dev",
-        script_path: "resources/DEV/helloJenkins.sh"
+        script_path: "resources/DEV/run_dev.sh"
     ],
     staging: [
         name: "Testing",
         branch: "test",
         ec2_instance: "ec2-instance-staging",
-        script_path: "resources/TEST/helloJenkins.sh"
+        script_path: "resources/TEST/run_test.sh"
     ],
     prod: [
         name: "Production",
         branch: "main",
         ec2_instance: "ec2-instance-prod",
-        script_path: "resources/PROD/helloJenkins.sh"
+        script_path: "resources/PROD/run_prod.sh"
     ]
 ]
 

@@ -1,3 +1,9 @@
+// String env = 'dev'
+
+def githubUrl = 'https://github.com'
+def gitCreds = "prodigital-collinsefe"
+
+
 def environments = [
     dev: [
         name: "Development",

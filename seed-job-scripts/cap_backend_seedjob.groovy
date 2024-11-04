@@ -26,7 +26,7 @@ def environments = [
 ]
 
 environments.each { env, config ->
-    job("COLL_${env.toUpperCase()}-Create-Job") {
+    job("COLL_${env.toUpperCase()}-BACKEND-JOB") {
         description("Job to deploy the application to the ${config.name} environment.")
         keepDependencies(false)
 

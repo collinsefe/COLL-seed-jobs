@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOCKER_HUB_USERNAME="collinsefe"  
-DOCKER_HUB_PASSWORD="${collins}"  
+DOCKER_HUB_PASSWORD=credentials('collinsefe-dockerhub')  
 IMAGE_NAME="${DOCKER_HUB_USERNAME}/dotnet-app-image"  
 TAG="latest" 
 cd aspnet-core-dotnet-core

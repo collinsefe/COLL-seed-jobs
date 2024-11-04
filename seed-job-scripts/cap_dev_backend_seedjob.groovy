@@ -11,11 +11,11 @@ job("CAP-BACKEND-${env.toUpperCase()}-Job") {
         git {
             remote {
                 name('origin')
-                url ("https://gitlab.com/cloud-devops-assignments/spring-boot-react-example.git")
+                url ("https://github.com/collinsefe/spring-boot-react-example.git")
                 credentials(gitCreds)
             }
             extensions {
-                branch('*/master')
+                branch('*/dev')
             }
         }
     }

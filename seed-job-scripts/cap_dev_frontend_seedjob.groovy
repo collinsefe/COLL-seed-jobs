@@ -3,7 +3,7 @@ String env = 'dev'
 def githubUrl = 'https://github.com'
 def gitCreds = "prodigital-collinsefe"
 
-job("CAP-FRONTEND-${env.toUpperCase()}-Job") {
+job("COLL-FRONTEND-${env.toUpperCase()}-Job") {
     description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")
     keepDependencies(false)
 
@@ -11,7 +11,7 @@ job("CAP-FRONTEND-${env.toUpperCase()}-Job") {
         git{
             remote{
                 name('origin')
-                url ("https://gitlab.com/blue-harvest-assignments/cloud-assignment.git")
+                url ("https://gitlab.com/collinsefe/cloud-assignment.git")
                 credentials(gitCreds)
             }
             extensions{

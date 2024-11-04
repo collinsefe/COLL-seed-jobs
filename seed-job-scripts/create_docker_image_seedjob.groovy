@@ -1,4 +1,4 @@
-String env = 'dev'
+// String env = 'dev'
 
 def githubUrl = 'https://github.com'
 def gitCreds = "prodigital-collinsefe"
@@ -26,7 +26,7 @@ job("CAP-DOCKER-${env.toUpperCase()}-Job"){
     concurrentBuild(false)
 
     steps{
-        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_docker.sh"))
+        shell(readFileFromWorkspace("resources/common/run_docker.sh"))
     }
 
     publishers{

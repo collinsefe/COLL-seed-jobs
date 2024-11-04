@@ -15,7 +15,7 @@ mvn clean install
 
 # Run the Spring Boot application in detached mode
 echo "Running the Spring Boot application..."
-nohup java -jar target/*.jar --server.port=8081 > application.log 2>&1 &
+nohup java -jar target/*.jar --server.port=${8081} > application.log 2>&1 &
 
 # Print the PID of the detached process
 echo "Application started in detached mode with PID: $!"

@@ -34,8 +34,8 @@ environments.each { env, config ->
             git {
                 remote {
                     name('origin')
-                    url("https://github.com/collinsefe/capgem-app.git")
-                    credentials("12ac599-aee0")
+                    url("https://github.com/collinsefe/spring-boot-react-example.git")
+                    credentials("prodigital-collinsefe")
                 }
                 extensions {
                     branch("*/${config.branch}")

@@ -25,7 +25,7 @@ sleep 10
 
 # Test the API (you may adjust the curl command as necessary)
 echo "Testing the API..."
-curl -v -u greg:turnquist http://localhost:${port}/api/employees/3
+curl -v -u greg:turnquist http://localhost:8081/api/employees/3
 
 while true; do 
     sleep 60

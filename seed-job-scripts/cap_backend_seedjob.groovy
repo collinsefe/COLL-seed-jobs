@@ -34,7 +34,7 @@ environments.each { env, config ->
             git {
                 remote {
                     name('origin')
-                    url("https://github.com/collinsefe/spring-boot-react-example.git")
+                    url("https://gitlab.com/collinsefe/spring-boot-react-example.git")
                     credentials("prodigital-collinsefe")
                 }
                 extensions {

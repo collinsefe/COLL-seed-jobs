@@ -3,7 +3,7 @@ String env = 'dev'
 def githubUrl = 'https://github.com'
 def gitCreds = "prodigital-collinsefe"
 
-job("CAP-DOCKER-${env.toUpperCase()}-Job"){
+job("COLL-DOCKER-${env.toUpperCase()}-Job"){
     description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")
     keepDependencies(false)
 

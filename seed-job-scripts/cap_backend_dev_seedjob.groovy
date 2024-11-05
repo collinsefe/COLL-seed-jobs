@@ -6,7 +6,7 @@ pipelineJob("CAP-FRONTEND-${env.toUpperCase()}-Job") {
     description("This Job is used to create the Node Server and is versioned. Changes should be made through the repo.")
     keepDependencies(false)
 
-     definition {
+    definition {
         cpsScm {
             scm {
                 git {
@@ -14,21 +14,16 @@ pipelineJob("CAP-FRONTEND-${env.toUpperCase()}-Job") {
                         url(githubUrl)
                         credentials(gitCreds)
                     }
-                    branch('*/demo')
+                    branch('*/main')
                 }
             }
             scriptPath("resources/${env.toUpperCase()}/Jenkinsfile")
         }
     }
 
-    disabled(false)
-    concurrentBuild(false)
-
-    //    steps {
-    //     // Load and execute the Jenkinsfile as a shell script
-    //     // scriptPath("resources/${env.toUpperCase()}/Jenkinsfile")
-    //     // shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_backend.sh"))
-    // }
-
-    
+    properties {
+        // Disable concurrent builds for this pipeline job
+        pipelineTriggers([])
+        disableConcurrentBuilds()
+    }
 }

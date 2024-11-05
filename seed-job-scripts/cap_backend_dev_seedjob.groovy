@@ -17,7 +17,7 @@ pipelineJob("COLL-BACKEND-${env.toUpperCase()}-Job") {
                     branch('*/dev')
                 }
             }
-            scriptPath("resources/${env.toUpperCase()}/Jenkinsfile")
+            // scriptPath("resources/${env.toUpperCase()}/Jenkinsfile")
         }
     }
 

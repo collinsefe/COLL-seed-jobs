@@ -2,7 +2,7 @@ String env = 'dev'
 def githubUrl = 'https://gitlab.com/blue-harvest-assignments/cloud-assignment.git'
 def gitCreds = "prodigital-collinsefe"
 
-pipelineJob("CAP-FRONTEND-${env.toUpperCase()}-Job") {
+pipelineJob("COLL-BACKEND-${env.toUpperCase()}-Job") {
     description("This Job is used to create the Node Server and is versioned. Changes should be made through the repo.")
     keepDependencies(false)
 

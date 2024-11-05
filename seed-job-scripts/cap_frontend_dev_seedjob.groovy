@@ -1,5 +1,5 @@
 String env = 'dev'
-def githubUrl = 'https://gitlab.com/collinsefe/cloud-assignment.git'
+def githubUrl = 'https://github.com/collinsefe/dotnet-app-image.git'
 def gitCreds = "prodigital-collinsefe"
 
 pipelineJob("COLL-BACKEND-${env.toUpperCase()}-Job") {

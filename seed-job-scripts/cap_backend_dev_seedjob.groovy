@@ -24,11 +24,11 @@ pipelineJob("CAP-FRONTEND-${env.toUpperCase()}-Job") {
     disabled(false)
     concurrentBuild(false)
 
-       steps {
-        // Load and execute the Jenkinsfile as a shell script
-        // scriptPath("resources/${env.toUpperCase()}/Jenkinsfile")
-        shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_backend.sh"))
-    }
+    //    steps {
+    //     // Load and execute the Jenkinsfile as a shell script
+    //     // scriptPath("resources/${env.toUpperCase()}/Jenkinsfile")
+    //     // shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_backend.sh"))
+    // }
 
     
 }

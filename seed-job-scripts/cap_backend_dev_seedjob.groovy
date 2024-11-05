@@ -23,7 +23,6 @@ pipelineJob("CAP-FRONTEND-${env.toUpperCase()}-Job") {
 
     properties {
         // Disable concurrent builds for this pipeline job
-        pipelineTriggers([])
         disableConcurrentBuilds()
     }
 }

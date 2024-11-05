@@ -1,4 +1,3 @@
-// String env = 'dev'
 
 def githubUrl = 'https://github.com'
 def gitCreds = "prodigital-collinsefe"
@@ -12,20 +11,13 @@ def environments = [
         script_path: "resources/DEV/run_backend.sh",
         port: "8081"
     ],
-    staging: [
+    test: [
         name: "Testing",
         branch: "test",
         ec2_instance: "ec2-instance-staging",
         script_path: "resources/TEST/run_backend.sh",
         port: "8082"
     ],
-    prod: [
-        name: "Production",
-        branch: "main",
-        ec2_instance: "ec2-instance-prod",
-        script_path: "resources/PROD/run_backend.sh",
-        port: "8083"
-    ]
 ]
 
 environments.each { env, config ->
@@ -50,13 +42,6 @@ environments.each { env, config ->
 
         disabled(false)
         concurrentBuild(false)
-
-        steps {
-            shell(readFileFromWorkspace(config.script_path))
-            shell("echo Deploying to EC2 instance: ${config.ec2_instance}")
-            // SSH command to deploy to specific EC2 instance
-            shell("ssh -i /tmp/collinsefe.pem ec2-user@${config.ec2_instance} 'bash -s' < ./run_backend.sh")
-        }
 
         publishers {
             downstream("JobName", "SUCCESS")

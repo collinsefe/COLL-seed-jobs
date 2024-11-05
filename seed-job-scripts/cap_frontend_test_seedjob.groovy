@@ -14,7 +14,7 @@ pipelineJob("CAP-FRONTEND-${env.toUpperCase()}-Job") {
                         url(githubUrl)
                         credentials(gitCreds)
                     }
-                    branch('*/dev')
+                    branch('*/test')
                 }
             }
         }

@@ -14,7 +14,7 @@ pipelineJob("COLL-BACKEND-${env.toUpperCase()}-Job") {
                         url(githubUrl)
                         credentials(gitCreds)
                     }
-                    branch('*/main')
+                    branch('*/dev')
                 }
             }
             scriptPath("resources/${env.toUpperCase()}/Jenkinsfile")

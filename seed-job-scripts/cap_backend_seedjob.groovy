@@ -1,4 +1,3 @@
-
 def githubUrl = 'https://github.com'
 def gitCreds = "prodigital-collinsefe"
 
@@ -21,7 +20,7 @@ def environments = [
 ]
 
 environments.each { env, config ->
-    job("COLL-BACKEND-${env.toUpperCase()}-JOB") {
+    job("CAP-BACKEND-${env.toUpperCase()}-JOB") {
         description("Job to deploy the application to the ${config.name} environment.")
         keepDependencies(false)
 

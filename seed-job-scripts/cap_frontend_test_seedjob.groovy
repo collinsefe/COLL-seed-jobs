@@ -1,4 +1,4 @@
-String env = 'dev'
+String env = 'test'
 def githubUrl = 'https://github.com/collinsefe/dotnet-app-image.git'
 def gitCreds = "prodigital-collinsefe"
 

@@ -14,7 +14,7 @@ pipelineJob("CAP-FRONTEND-${env.toUpperCase()}-Job") {
                         url(githubUrl)
                         credentials(gitCreds)
                     }
-                    branch('*/main')
+                    branch('*/demo')
                 }
             }
             scriptPath("resources/${env.toUpperCase()}/Jenkinsfile")
@@ -29,21 +29,6 @@ pipelineJob("CAP-FRONTEND-${env.toUpperCase()}-Job") {
         // scriptPath("resources/${env.toUpperCase()}/Jenkinsfile")
         shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_backend.sh"))
     }
-
-
-    publishers {
-        downstream("CAP-DOCKER-DEV-Job", "SUCCESS")
-        triggers {
-            downstream("zdb-addReadANDWrite", "SUCCESS")
-        }
-    }
-
-    // configure {
-    //     it / 'properties' / 'com.sonyericsson.rebuild.RebuildSettings' {
-    //         'autoRebuild'('false')
-    //         'rebuildDisabled'('false')
-    //     }
-    // }
 
     
 }

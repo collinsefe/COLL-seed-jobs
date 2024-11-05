@@ -1,10 +1,9 @@
 String env = 'dev'
-
-def githubUrl = 'https://github.com'
+def githubUrl = 'https://gitlab.com/blue-harvest-assignments/cloud-assignment.git'
 def gitCreds = "prodigital-collinsefe"
 
-job("CAP-BACKEND-${env.toUpperCase()}-Job") {
-    description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")
+pipelineJob("CAP-FRONTEND-${env.toUpperCase()}-Job") {
+    description("This Job is used to create the Node Server and is versioned. Changes should be made through the repo.")
     keepDependencies(false)
 
      definition {

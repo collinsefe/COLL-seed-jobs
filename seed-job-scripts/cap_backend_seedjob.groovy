@@ -1,4 +1,4 @@
-def githubUrl = 'https://github.com/collinsefe/spring-boot-react-example.git'
+def githubUrl = "https://github.com/collinsefe/spring-boot-react-app.git"
 def gitCreds = 'prodigital-collinsefe'
 
 def environments = [

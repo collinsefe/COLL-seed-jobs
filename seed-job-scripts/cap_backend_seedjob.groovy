@@ -37,15 +37,13 @@ environments.each { env, config ->
             }
         }
 
+        triggers {
+            githubPush()  
+        }
+
     disabled(false)
     concurrentBuild(false)
 
-        // steps {
-        //     shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_backend.sh"))
-        //     // shell("echo Deploying to EC2 instance: ${params.ec2Instance}")
-        // }
-
-        // label('A-Build-Node')
 
          properties {
         disableConcurrentBuilds()

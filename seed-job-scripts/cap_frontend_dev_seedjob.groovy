@@ -38,7 +38,7 @@ pipelineJob("CAP-FRONTEND-${env.toUpperCase()}-Job") {
         }
     }
     triggers {
-            githubPush()  // GitHub hook trigger for GITScm polling
+            githubPush()  
         }
 
     properties {

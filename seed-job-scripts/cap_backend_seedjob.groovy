@@ -2,9 +2,9 @@ def githubUrl = "https://github.com/collinsefe/spring-boot-react-app.git"
 def gitCreds = 'prodigital-collinsefe'
 
 def environments = [
-    demo: [
-        name: 'Demo',
-        branch: 'demo'
+    dev: [
+        name: 'Dev',
+        branch: 'Dev'
     ],
     test: [
         name: 'Dev',

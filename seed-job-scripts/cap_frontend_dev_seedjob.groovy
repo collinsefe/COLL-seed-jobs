@@ -5,11 +5,11 @@ def gitCreds = "prodigital-collinsefe"
 def environments = [
     dev: [
         name: "Development",
-        branch: "dev",
+        branch: "dev"
     ],
     test: [
         name: "Testing",
-        branch: "test",
+        branch: "test"
     ],
 ]
 

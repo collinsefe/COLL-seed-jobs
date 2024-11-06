@@ -5,14 +5,11 @@ def gitCreds = "prodigital-collinsefe"
 def environments = [
     demo: [
         name: "Demo",
-        branch: "demo",
-        ec2_instance: "ec2-instance-dev",
-        script_path: "resources/DEMO/run_backend.sh",
-        port: "8081"
+        branch: "demo"
     ],
     test: [
         name: "Testing",
-        branch: "test",
+        branch: "test"
     ],
 ]
 

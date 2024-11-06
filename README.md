@@ -11,12 +11,12 @@ Set up Jenkins pipeline jobs to build, test, and deploy frontend and backend app
 
 Trigger on GitHub repository changes, ensuring continuous integration for both applications.
 
-# GitHub Repository URLs
+## GitHub Repository URLs
 CAP-FRONTEND: https://github.com/collinsefe/dotnet-app-image
 
 CAP-BACKEND: https://github.com/collinsefe/spring-boot-react-app
 
-# Jenkins Git Credentials ID
+## Jenkins Git Credentials ID
 
 Both seed jobs require the Jenkins Git credential ID <your-credentials-go-here>  to authenticate and fetch code from the repositories.
 
@@ -27,21 +27,21 @@ name: The friendly name of the environment.
 
 branch: The Git branch associated with the environment.
 
-# Supported Environments:
+## Supported Environments:
 Development (dev branch)
 
 Testing (test branch)
 
 Production - WIP
 
-# Job Structure
+### Job Structure
 For each environment, these seed jobs create a corresponding Jenkins pipeline job with the naming format:
 
 CAP-FRONTEND-<ENVIRONMENT>-Job (for the frontend application)
 
 CAP-BACKEND-<ENVIRONMENT>-Job (for the backend application)
 
-# Each generated job has the following features:
+### Each generated job has the following features:
 
 Description: Details the purpose of the job and advises making changes via the repository.
 
@@ -51,7 +51,7 @@ Trigger: Automatically triggers a build on GitHub push events to the specified b
 
 Build Properties: Disables concurrent builds to prevent overlapping executions.
 
-# Seed Job Scripts
+### Seed Job Scripts
 
 CAP-FRONTEND Seed Job Script
 
@@ -103,7 +103,7 @@ environments.each { env, config ->
     }
 }
 ```
-# CAP-BACKEND Seed Job Script
+### CAP-BACKEND Seed Job Script
 
 The backend seed job script creates jobs to build and deploy the CAP-BACKEND application. 
 
@@ -156,18 +156,18 @@ environments.each { env, config ->
 
 Usage
 
-# Set Up GitHub Credentials: 
+### Set Up GitHub Credentials: 
 
 Ensure Jenkins has a credential entry with the ID <your-credentials-id-goes-here> to access the GitHub repositories.
 
-# Configure GitHub Webhooks: 
+### Configure GitHub Webhooks: 
 
 Set up webhooks on both repositories to notify Jenkins on push events.
 
-# Run the Seed Jobs: 
+### Run the Seed Jobs: 
 
 Execute these scripts in Jenkins to create environment-specific jobs for the CAP-FRONTEND and CAP-BACKEND applications.
 
-License
+### License
 
 This repository and seed job code are licensed under the MIT License.

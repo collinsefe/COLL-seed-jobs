@@ -42,8 +42,8 @@ job("CAP-BACKEND-${env.toUpperCase()}-Job") {
     
  // Pass in the environment-specific script and EC2 instance
         steps {
-            shell(readFileFromWorkspace("resources/${env.toUpperCase()}/helloJenkins.sh"))
-            shell("echo Deploying to EC2 instance: ${params.ec2Instance}")
+            shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_backend.sh"))
+            // shell("echo Deploying to EC2 instance: ${params.ec2Instance}")
         }
 
         publishers {

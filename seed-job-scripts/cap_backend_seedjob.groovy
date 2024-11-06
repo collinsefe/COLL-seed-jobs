@@ -37,10 +37,19 @@ environments.each { env, config ->
             }
         }
 
+    disabled(false)
+    concurrentBuild(false)
+
+        // steps {
+        //     shell(readFileFromWorkspace("resources/${env.toUpperCase()}/run_backend.sh"))
+        //     // shell("echo Deploying to EC2 instance: ${params.ec2Instance}")
+        // }
+
         // label('A-Build-Node')
 
-        disabled(false)
-        concurrentBuild(false)
+         properties {
+        disableConcurrentBuilds()
+    }
 
         publishers {
             downstream("JobName", "SUCCESS")

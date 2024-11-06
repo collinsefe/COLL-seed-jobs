@@ -18,35 +18,26 @@ environments.each { env, config ->
         description("Job to deploy the application to the ${config.name} environment.")
         keepDependencies(false)
 
-    definition {
-        cpsScm {
-            scm {
-                git {
-                    remote {
-                        url(githubUrl)
-                        credentials(gitCreds)
+        definition {
+            cpsScm {
+                scm {
+                    git {
+                        remote {
+                            url(githubUrl)
+                            credentials(gitCreds)
+                        }
+                        branch("*/${config.branch}")
                     }
-                    branch("*/${config.branch}")
                 }
             }
         }
-    }
-
-
         triggers {
-            githubPush()  
-        }
+                githubPush()  
+            }
 
-    disabled(false)
-    concurrentBuild(false)
-
-
-         properties {
-        disableConcurrentBuilds()
-    }
-
-        publishers {
-            downstream("JobName", "SUCCESS")
+        properties {
+            disableConcurrentBuilds()
         }
     }
 }
+

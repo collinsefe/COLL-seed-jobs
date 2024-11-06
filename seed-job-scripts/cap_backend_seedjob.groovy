@@ -4,19 +4,19 @@ def gitCreds = "prodigital-collinsefe"
 
 def environments = [
     dev: [
-        name: "Development",
-        branch: "dev",
+        name: "Demo",
+        branch: "demo",
         ec2_instance: "ec2-instance-dev",
         script_path: "resources/DEV/run_backend.sh",
         port: "8081"
-    ],
-    test: [
-        name: "Testing",
-        branch: "test",
-        ec2_instance: "ec2-instance-staging",
-        script_path: "resources/TEST/run_backend.sh",
-        port: "8082"
-    ],
+    // ],
+    // test: [
+    //     name: "Testing",
+    //     branch: "test",
+    //     ec2_instance: "ec2-instance-staging",
+    //     script_path: "resources/TEST/run_backend.sh",
+    //     port: "8082"
+    // ],
 ]
 
 environments.each { env, config ->
@@ -28,7 +28,7 @@ environments.each { env, config ->
             git {
                 remote {
                     name('origin')
-                    url("https://gitlab.com/collinsefe/spring-boot-react-example.git")
+                    url("https://github.com/collinsefe/spring-boot-react-app.git")
                     credentials("prodigital-collinsefe")
                 }
                 extensions {

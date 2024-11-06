@@ -13,7 +13,7 @@ def environments = [
 ]
 
 environments.each { env, config ->
-    pipelineJob("COLL-FRONTEND-${env.toUpperCase()}-Job") {
+    pipelineJob("CAP-FRONTEND-${env.toUpperCase()}-Job") {
         description('This Job is used to create the Node Server and is versioned. Changes should be made through the repo.')
         keepDependencies(false)
 

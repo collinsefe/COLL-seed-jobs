@@ -3,17 +3,17 @@ def gitCreds = 'prodigital-collinsefe'
 
 def environments = [
     dev: [
-        name: 'dev',
+        name: 'Development',
         branch: 'dev'
     ],
     test: [
-        name: 'test',
+        name: 'Testing',
         branch: 'test'
     ],
 ]
 
 environments.each { env, config ->
-    pipelineJob("COLL-BACKEND-${env.toUpperCase()}-Job") {
+    pipelineJob("CAP-BACKEND-${env.toUpperCase()}-Job") {
         description('This Job is used to create the Node Server and is versioned. Changes should be made through the repo.')
         keepDependencies(false)
 

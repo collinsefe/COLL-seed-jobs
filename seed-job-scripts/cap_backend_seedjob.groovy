@@ -14,30 +14,29 @@ def environments = [
 ]
 
 environments.each { env, config ->
-    job("COLL-BACKEND-${env.toUpperCase()}-JOB") {
-        description("Job to deploy the application to the ${config.name} environment.")
-        keepDependencies(false)
+pipelineJob("COLL-BACKEND-${env.toUpperCase()}-Job") {
+    description("This Job is used to create the Node Server and is versioned. Changes should be made through the repo.")
+    keepDependencies(false)
 
-        definition {
-            cpsScm {
-                scm {
-                    git {
-                        remote {
-                            url(githubUrl)
-                            credentials(gitCreds)
-                        }
-                        branch("*/${config.branch}")
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url(githubUrl)
+                        credentials(gitCreds)
                     }
+                    branch("*/${config.branch}")
                 }
             }
         }
-        triggers {
-                githubPush()  
-            }
-
-        properties {
-            disableConcurrentBuilds()
-        }
     }
-}
+    triggers {
+            githubPush()  
+        }
 
+    properties {
+        disableConcurrentBuilds()
+    }
+ }
+}

@@ -1,4 +1,4 @@
-def githubUrl = 'https://github.com'
+def githubUrl = 'https://github.com/collinsefe/spring-boot-react-example.git'
 def gitCreds = "prodigital-collinsefe"
 
 
@@ -13,9 +13,6 @@ def environments = [
     test: [
         name: "Testing",
         branch: "test",
-        ec2_instance: "ec2-instance-staging",
-        script_path: "resources/TEST/run_backend.sh",
-        port: "8082"
     ],
 ]
 
@@ -24,18 +21,20 @@ environments.each { env, config ->
         description("Job to deploy the application to the ${config.name} environment.")
         keepDependencies(false)
 
-        multiscm {
-            git {
-                remote {
-                    name('origin')
-                    url("https://github.com/collinsefe/spring-boot-react-app.git")
-                    credentials("prodigital-collinsefe")
-                }
-                extensions {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url(githubUrl)
+                        credentials(gitCreds)
+                    }
                     branch("*/${config.branch}")
                 }
             }
         }
+    }
+
 
         triggers {
             githubPush()  

@@ -6,16 +6,10 @@ def environments = [
     dev: [
         name: "Development",
         branch: "dev",
-        ec2_instance: "ec2-instance-dev",
-        script_path: "resources/DEV/run_backend.sh",
-        port: "8081"
     ],
     test: [
         name: "Testing",
         branch: "test",
-        ec2_instance: "ec2-instance-staging",
-        script_path: "resources/TEST/run_backend.sh",
-        port: "8082"
     ],
 ]
 

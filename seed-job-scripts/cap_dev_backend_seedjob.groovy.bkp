@@ -20,7 +20,7 @@ def environments = [
 // Create jobs for each environment
 environments.each { env, params ->
 
-job("CAP-BACKEND-${env.toUpperCase()}-Job") {
+job("COLL-BACKEND-${env.toUpperCase()}-Job") {
     description("This Job is used to create the Node Server and its versioned. Changes should be made through the repo")
     keepDependencies(false)
 

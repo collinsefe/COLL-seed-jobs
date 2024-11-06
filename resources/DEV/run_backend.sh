@@ -7,20 +7,20 @@
 
 ls -la 
 
-echo "Building the application..."
-mvn clean install
+# echo "Building the application..."
+# mvn clean install
 
 
- echo "Running the Spring Boot application..."
- nohup java -jar target/*.jar --server.port=${port} > application.log 2>&1 &
+#  echo "Running the Spring Boot application..."
+#  nohup java -jar target/*.jar --server.port=${port} > application.log 2>&1 &
 
-echo "Application started in detached mode with PID: $!"
+# echo "Application started in detached mode with PID: $!"
 
-sleep 10
+# sleep 10
 
-# echo "Testing the API..."
-curl -v -u greg:turnquist http://localhost:8081/api/employees/3
+# # echo "Testing the API..."
+# curl -v -u greg:turnquist http://localhost:8081/api/employees/3
 
-# while true; do 
-#     sleep 60
-# done
+# # while true; do 
+# #     sleep 60
+# # done

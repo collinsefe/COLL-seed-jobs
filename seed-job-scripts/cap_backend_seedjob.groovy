@@ -3,20 +3,20 @@ def gitCreds = "prodigital-collinsefe"
 
 
 def environments = [
-    dev: [
+    demo: [
         name: "Demo",
         branch: "demo",
         ec2_instance: "ec2-instance-dev",
-        script_path: "resources/DEV/run_backend.sh",
+        script_path: "resources/DEMO/run_backend.sh",
         port: "8081"
-    // ],
-    // test: [
-    //     name: "Testing",
-    //     branch: "test",
-    //     ec2_instance: "ec2-instance-staging",
-    //     script_path: "resources/TEST/run_backend.sh",
-    //     port: "8082"
-    // ],
+    ],
+    test: [
+        name: "Testing",
+        branch: "test",
+        ec2_instance: "ec2-instance-staging",
+        script_path: "resources/TEST/run_backend.sh",
+        port: "8082"
+    ],
 ]
 
 environments.each { env, config ->

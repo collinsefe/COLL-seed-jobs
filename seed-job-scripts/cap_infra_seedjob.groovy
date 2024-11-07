@@ -4,7 +4,7 @@ def gitCreds = 'prodigital-collinsefe'
 
 def environments = [
     dev: [
-        name: 'Development',
+        name: 'Create',
         branch: 'dev'
     ],
     destroy: [

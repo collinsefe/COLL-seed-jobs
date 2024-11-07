@@ -7,8 +7,8 @@ def environments = [
         name: 'Development',
         branch: 'dev'
     ],
-    test: [
-        name: 'Testing',
+    destroy: [
+        name: 'Destroy',
         branch: 'test'
     ],
 ]

@@ -23,9 +23,9 @@ Both seed jobs require the Jenkins Git credential ID <your-credentials-go-here> 
 ## Environment Configurations
 The environments are defined in a map, environments, where each entry specifies:
 
-name: The friendly name of the environment.
+**name:** The friendly name of the environment.
 
-branch: The Git branch associated with the environment.
+**branch:** The Git branch associated with the environment.
 
 ## Supported Environments:
 Development (dev branch)
@@ -43,13 +43,13 @@ CAP-BACKEND-<ENVIRONMENT>-Job (for the backend application)
 
 ### Each generated job has the following features:
 
-Description: Details the purpose of the job and advises making changes via the repository.
+**Description:** Details the purpose of the job and advises making changes via the repository.
 
-SCM Configuration: Configures each job to pull the appropriate branch from the designated GitHub repository.
+**SCM Configuration:** Configures each job to pull the appropriate branch from the designated GitHub repository.
 
-Trigger: Automatically triggers a build on GitHub push events to the specified branch.
+**Trigger:** Automatically triggers a build on GitHub push events to the specified branch.
 
-Build Properties: Disables concurrent builds to prevent overlapping executions.
+**Build Properties:** Disables concurrent builds to prevent overlapping executions.
 
 ### Seed Job Scripts
 

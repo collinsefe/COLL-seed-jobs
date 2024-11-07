@@ -32,7 +32,7 @@ Development (dev branch)
 
 Testing (test branch)
 
-Production - WIP
+Production - (main branch) - WIP
 
 ### Job Structure
 For each environment, these seed jobs create a corresponding Jenkins pipeline job with the naming format:

@@ -7,10 +7,6 @@ def environments = [
         name: 'Create',
         branch: 'dev'
     ],
-    destroy: [
-        name: 'Destroy',
-        branch: 'test'
-    ],
 ]
 
 environments.each { env, config ->

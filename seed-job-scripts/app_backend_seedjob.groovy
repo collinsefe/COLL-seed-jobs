@@ -10,6 +10,10 @@ def environments = [
         name: 'Testing',
         branch: 'test'
     ],
+         prod: [
+        name: 'Production',
+        branch: 'main'
+    ],
 ]
 
 environments.each { env, config ->

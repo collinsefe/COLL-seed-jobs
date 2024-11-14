@@ -6,10 +6,6 @@ def environments = [
         name: 'Development',
         branch: 'dev'
     ],
-    test: [
-        name: 'Testing',
-        branch: 'test'
-    ],
          prod: [
         name: 'Production',
         branch: 'main'

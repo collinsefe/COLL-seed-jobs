@@ -14,7 +14,7 @@ def environments = [
 ]
 
 environments.each { env, config ->
-    pipelineJob("MEDICAL-APP-${env.toUpperCase()}-Job") {
+    pipelineJob("MEDICAL-APP-INFRA-${env.toUpperCase()}-Job") {
         description('This Job is used to create the Node Server and is versioned. Changes should be made through the repo.')
         keepDependencies(false)
 
